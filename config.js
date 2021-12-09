@@ -1,0 +1,7 @@
+export const player_choose = document.querySelector('#player_choose')
+export const gameboard = document.querySelector('#gameboard')
+export const winning_message = document.querySelector('#winning_message')
+export const prev_btn = document.querySelector('#prev_btn')
+export const restart_btn = document.querySelector('#restart_btn')
+export const next_btn = document.querySelector('#next_btn')
+export const cells = document.querySelectorAll('[data-cell]')

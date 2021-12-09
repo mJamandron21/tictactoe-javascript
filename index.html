@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="favicon_io/favicon-32x32.png" type="image/x-icon/svg">
+  <link rel="icon" href="favicon_io/favicon-32x32.png" type="image/x-icon/svg">
+  <link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png" type="image/x-icon/svg">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+
+  <link href="style.css" rel="stylesheet">
+  <script src="app.js" defer type="module"></script>
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+
+  <div id="player_choose">
+    <h1>Choose your player?</h1>
+    <div>
+      <button id="choose_x_btn">Player X</button>
+      <button id="choose_o_btn">Player O</button>
+    </div>
+  </div>
+
+  <div id="main">
+
+    <div id="title">
+      <h1 id="game_title">Tic Tac Toe</h1>
+      <h1 id="action_turn"></h1>
+      <h1 id="winning_message"></h1>
+    </div>
+
+    <div id="gameboard">
+      <div class="cell" data-cell="0" id="a"></div>
+      <div class="cell" data-cell="1" id="b"></div>
+      <div class="cell" data-cell="2" id="c"></div>
+      <div class="cell" data-cell="3" id="d"></div>
+      <div class="cell" data-cell="4" id="e"></div>
+      <div class="cell" data-cell="5" id="f"></div>
+      <div class="cell" data-cell="6" id="g"></div>
+      <div class="cell" data-cell="7" id="h"></div>
+      <div class="cell" data-cell="8" id="i"></div>
+    </div>
+
+    <div id="button">
+      <button id="prev_btn">Prev</button>
+      <button id="restart_btn">Play Again</button>
+      <button id="next_btn">Next</button>
+    </div>
+
+  </div>
+</body>
+</html>
