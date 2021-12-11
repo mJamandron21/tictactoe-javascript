@@ -33,16 +33,10 @@ const handleClick = (e) => {
   board[div_cell.dataset.cell] = current_move;
   placeMove (board, div_cell, current_move)
   
-  // save move to history
-
-  saveMove();
-
-  // swap move
-
-  swapMove()
+  saveMove();// save move to history
+  swapMove() // swap move
 
   // check if win or draw
-
   if (checkWin(current_move)) {
     action_turn.innerText = ""
     winning_message.innerHTML = `Player ${player_move ? "X" : "O"} Win!!! `
@@ -83,6 +77,8 @@ const choosePlayer = () => {
     player_move = !player_move
   })
 }
+
+// REfactor
 
 choosePlayer()
 
@@ -157,9 +153,8 @@ const showHistory = () => {
   next_btn.addEventListener("click", NextMove);
 }
 
-const saveMove = () => {
-  moved.push([...board])
-}
+const saveMove = () => moved.push([...board])
+
 
 const showHistoryMove = (board) => {
   //clear cells
@@ -174,23 +169,22 @@ const showHistoryMove = (board) => {
     prev_btn.style.cursor = "pointer"
     prev_btn.removeAttribute("disabled");
   }
-
-}
-
-const PreviousMove = () => {
-  showHistoryMove(moved[--player_move - 1]);
   if (player_move <= 1) {
-    prev_btn.setAttribute("disabled", true);
-    prev_btn.style.cursor = "not-allowed"
-  }
+      prev_btn.setAttribute("disabled", true);
+      prev_btn.style.cursor = "not-allowed"
+    }
+    if (player_move >= moved.length) {
+      next_btn.setAttribute("disabled", true);
+      next_btn.style.cursor = "not-allowed"
+    }
+
 }
-const NextMove = () => {
-  showHistoryMove(moved[player_move++]);
-  if (player_move >= moved.length) {
-    next_btn.setAttribute("disabled", true);
-    next_btn.style.cursor = "not-allowed"
-  }
-}
+
+const PreviousMove = () => showHistoryMove(moved[--player_move - 1]); //PreviousButton
+
+const NextMove = () => showHistoryMove(moved[player_move++]);
+  
+
 
 
 gameStart ()
