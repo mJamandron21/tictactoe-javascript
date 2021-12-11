@@ -11,7 +11,7 @@ const move_o = "O"
 let player_move
 
 let board = ['', '', '', '', '', '', '', '', '']; //array board to place players symbols
-let moved = [['', '', '', '', '', '', '', '', '']]; //array move to place history of turns
+let moved = [['']]; //array move to place history of turns
 
 const winning_pattern = [
   [0, 1, 2],
